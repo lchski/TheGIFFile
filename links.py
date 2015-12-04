@@ -2,6 +2,8 @@
 
 import glob, json
 
-gifs = [g.replace('TheGIFFile/', '') for g in glob.glob("/Users/lucas/Dropbox/Public/TheGIFFile/*.gif")]
+path = '/Users/lucas/Dropbox/Public/TheGIFFile/'
+
+gifs = [g.replace(path, '') for g in glob.glob(path + '*.gif')]
 
 print(json.dumps(gifs))
