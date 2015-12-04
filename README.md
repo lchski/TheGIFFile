@@ -6,6 +6,6 @@ Recently a friend asked for access to my GIFFile.
 
 Being the code-savvy developer (read: lazy bum) that I am, I quickly churned out a Python script that generated a list of HTML links to all the GIFs in the directory. This served its purpose, but was decidedly *boring*. This is the web—it should be sortable, tagged, searchable, all that stuff! (Hahaha hello interactive web 2.0 folks, welcome to my ramblings.)
 
-To achieve these latter goals, I decided to refactor (so, so, so easy to do when you start out from a script that literally just prints HTML links), building out a little AngularJS app to serve as a web interface to my GIFFile.
+To achieve these latter goals, I decided to refactor (so, so, so easy to do when you start out from a script that literally just prints HTML links), building out a little AngularJS app to serve as [a web interface to my GIFFile](https://dl.dropboxusercontent.com/u/9296799/TheGIFFile/index.html).
 
 This is a work in progress. But yay learning! And yay GIFs! And yay to the friendship that got me to do this in the first place!
