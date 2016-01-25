@@ -6,4 +6,5 @@ path = '/Users/lucas/Dropbox/Public/TheGIFFile/'
 
 gifs = [g.replace(path, '') for g in glob.glob(path + '*.gif')]
 
-print(json.dumps(gifs))
+with open('gifs.json', 'w') as jsonfile:
+	json.dump(gifs, jsonfile)
