@@ -4,7 +4,7 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload;
 
-gulp.task('serve', function() {
+gulp.task('serve', ['css'], function() {
   browserSync({
     server: {
       baseDir: 'app'
@@ -23,5 +23,6 @@ gulp.task('css', function() {
       require('cssnano')()
     ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css/'));
+    .pipe(gulp.dest('dist/css/'))
+    .pipe(reload({ stream: true }));
 });
