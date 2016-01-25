@@ -1,0 +1,20 @@
+{
+  "name": "thegiffile",
+  "version": "1.0.0",
+  "description": "All my GIFs, on display.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lchski/TheGIFFile.git"
+  },
+  "author": "Lucas Cherkewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lchski/TheGIFFile/issues"
+  },
+  "homepage": "https://github.com/lchski/TheGIFFile#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
