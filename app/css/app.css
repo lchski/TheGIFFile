@@ -1,0 +1,13 @@
+.gifs {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+	.gifs li {
+		list-style: none;
+	}
+
+	.gif__image {
+		width: 33%;
+	}

@@ -9,9 +9,9 @@
 		<link href="css/app.css" rel="stylesheet">
 	</head>
 	<body ng-controller="GIFListCtrl">
-		<ul>
-			<li ng-repeat="gif in gifs">
-				<a href="https://dl.dropboxusercontent.com/u/9296799/TheGIFFile/{{gif}}"><img src="https://dl.dropboxusercontent.com/u/9296799/TheGIFFile/{{gif}}"></a>
+		<ul class="gifs">
+			<li class="gif" ng-repeat="gif in gifs">
+				<a class="gif__link" href="https://dl.dropboxusercontent.com/u/9296799/TheGIFFile/{{gif}}"><img class="gif__image" src="https://dl.dropboxusercontent.com/u/9296799/TheGIFFile/{{gif}}"></a>
 			</li>
 		</ul>
 	</body>
