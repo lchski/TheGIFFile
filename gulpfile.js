@@ -4,6 +4,16 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload;
 
+gulp.task('serve', function() {
+  browserSync({
+    server: {
+      baseDir: 'app'
+    }
+  });
+
+  gulp.watch(['*.html', 'css/**/*.css', 'js/**/*.js'], {cwd: 'app'}, reload);
+});
+
 gulp.task('css', function() {
   return gulp.src('app/css/**/*.css')
     .pipe(sourcemaps.init())
