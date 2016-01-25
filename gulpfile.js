@@ -7,7 +7,8 @@ var gulp        = require('gulp'),
 gulp.task('serve', ['css'], function() {
   browserSync({
     server: {
-      baseDir: 'dist'
+      baseDir: 'dist',
+      open: false
     }
   });
 
