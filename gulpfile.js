@@ -16,7 +16,7 @@ gulp.task('serve', ['html', 'css', 'js', 'json'], function() {
   gulp.watch('app/css/**/*.css', ['css']);
   gulp.watch('app/js/**/*.js', ['js']);
   gulp.watch('app/data/**/*.json', ['json'])
-  gulp.watch(['**/*.html', 'css/**/*.css', 'js/**/*.js', 'data/**/*.json'], {cwd: 'app'}, reload);
+  gulp.watch(['**/*.html', 'js/**/*.js', 'data/**/*.json'], {cwd: 'app'}, reload);
 });
 
 gulp.task('html', function() {
