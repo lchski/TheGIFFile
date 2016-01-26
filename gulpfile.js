@@ -1,11 +1,10 @@
 var gulp        = require('gulp'),
     postcss     = require('gulp-postcss'),
     sourcemaps  = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync'),
-    reload      = browserSync.reload;
+    browserSync = require('browser-sync').create();
 
 gulp.task('serve', ['html', 'css', 'js', 'json'], function() {
-  browserSync({
+  browserSync.init({
     server: {
       baseDir: 'dist',
       open: false
@@ -16,7 +15,7 @@ gulp.task('serve', ['html', 'css', 'js', 'json'], function() {
   gulp.watch('app/css/**/*.css', ['css']);
   gulp.watch('app/js/**/*.js', ['js']);
   gulp.watch('app/data/**/*.json', ['json'])
-  gulp.watch(['**/*.html', 'js/**/*.js', 'data/**/*.json'], {cwd: 'app'}, reload);
+  gulp.watch(['**/*.html', 'js/**/*.js', 'data/**/*.json'], {cwd: 'app'}, browserSync.reload);
 });
 
 gulp.task('html', function() {
@@ -35,7 +34,7 @@ gulp.task('css', function() {
     ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css/'))
-    .pipe(reload({ stream: true }));
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('js', function() {
